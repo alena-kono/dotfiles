@@ -74,12 +74,14 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'morhetz/gruvbox'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'windwp/nvim-autopairs'
 " Plug 'Mofiqul/dracula.nvim'
 call plug#end()
 
 
 " Colorshemes
 colorscheme gruvbox
+" colorscheme github_light
 
 
 " Status line
@@ -104,6 +106,11 @@ EOF
 " Buffers keymaps
 nnoremap <silent> <C-[> :bprevious<CR>
 nnoremap <silent> <C-]> :bnext<CR>
+
+" Nvim autopairs
+lua << EOF
+require('nvim-autopairs').setup{}
+EOF
 
 
 " COC
@@ -281,7 +288,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 " Telescope
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope find_files hidden=true<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
