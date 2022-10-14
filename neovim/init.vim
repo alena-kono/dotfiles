@@ -73,16 +73,19 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'windwp/nvim-autopairs'
 Plug 'Mofiqul/dracula.nvim'
+Plug 'navarasu/onedark.nvim'
 Plug 'f-person/auto-dark-mode.nvim'
 call plug#end()
 
 
 " Colorshemes
-colorscheme dracula
+colorscheme nightfox
+" colorscheme dracula
 " colorscheme gruvbox
 " colorscheme github_light
 
@@ -380,7 +383,7 @@ auto_dark_mode.setup({
 	update_interval = 1000,
 	set_dark_mode = function()
 		vim.api.nvim_set_option('background', 'dark')
-		vim.cmd('colorscheme dracula')
+		vim.cmd('colorscheme onedark')
 	end,
 	set_light_mode = function()
 		vim.api.nvim_set_option('background', 'light')
