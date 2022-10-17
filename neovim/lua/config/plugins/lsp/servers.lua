@@ -101,6 +101,7 @@ lsp.rust_analyzer.setup({
 
 ---List of the LSP server that don't need special configuration
 local servers = {
+    'pyright', -- Python
     -- 'zls', -- Zig
     'gopls', -- Golang
     'tsserver', -- Typescript

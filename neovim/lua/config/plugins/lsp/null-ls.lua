@@ -28,6 +28,7 @@ nls.setup({
             },
         }),
         -- fmt.rustfmt,
+        -- fmt.isort,
         fmt.stylua,
         fmt.gofmt,
         -- fmt.zigfmt,
@@ -36,6 +37,7 @@ nls.setup({
         -----------------
         -- DIAGNOSTICS --
         -----------------
+        -- dgn.flake8,
         -- dgn.eslint_d,
         -- dgn.shellcheck,
         -- dgn.luacheck.with({
