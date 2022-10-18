@@ -37,7 +37,7 @@ cmp.setup({
         ['<C-e>'] = cmp.config.disable,
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+        ['<tab>'] = cmp.mapping.confirm({ select = true }),
         ['<C-Space>'] = cmp.mapping.complete(),
     }),
     sources = cmp.config.sources({
