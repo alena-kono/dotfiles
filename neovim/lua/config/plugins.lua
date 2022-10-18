@@ -181,8 +181,6 @@ return require('packer').startup({
             end,
         })
 
-        use('numToStr/prettierrc.nvim')
-
         use({
             'tpope/vim-surround',
             event = 'BufRead',
@@ -240,23 +238,7 @@ return require('packer').startup({
                 config = function()
                     require('config.plugins.lsp.nvim-cmp')
                 end,
-                requires = {
-                    {
-                        'L3MON4D3/LuaSnip',
-                        event = 'InsertEnter',
-                        config = function()
-                            require('config.plugins.lsp.luasnip')
-                        end,
-                        requires = {
-                            {
-                                'rafamadriz/friendly-snippets',
-                                event = 'CursorHold',
-                            },
-                        },
-                    },
-                },
             },
-            { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' },
             { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
             { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
         })

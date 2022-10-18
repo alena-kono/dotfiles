@@ -4,7 +4,7 @@ local A = vim.api
 vim.filetype.add({
     extension = {
         eslintrc = 'json',
-        prettierrc = 'json',
+        prettierd = 'json',
         conf = 'conf',
         mdx = 'markdown',
         mjml = 'html',
