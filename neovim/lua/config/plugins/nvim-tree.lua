@@ -43,7 +43,7 @@ require('nvim-tree').setup({
             },
         },
         indent_markers = {
-            enable = true,
+            enable = false,
         },
     },
 })

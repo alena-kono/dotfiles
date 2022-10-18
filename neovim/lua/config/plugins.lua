@@ -26,7 +26,7 @@ return require('packer').startup({
         use({
             'kyazdani42/nvim-web-devicons',
             config = function()
-                require('nvim-web-devicons').setup()
+                require('nvim-web-devicons').setup({ color_icons = false })
             end,
         })
 
@@ -79,13 +79,13 @@ return require('packer').startup({
         -- Editor UI Niceties --
         --------------------------
 
-        use({
-            'lukas-reineke/indent-blankline.nvim',
-            event = 'BufRead',
-            config = function()
-                require('config.plugins.indentline')
-            end,
-        })
+        -- use({
+        --     'lukas-reineke/indent-blankline.nvim',
+        --     event = 'BufRead',
+        --     config = function()
+        --         require('config.plugins.indentline')
+        --     end,
+        -- })
 
         use({
             'norcalli/nvim-colorizer.lua',
