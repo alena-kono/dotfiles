@@ -1,7 +1,0 @@
-Mac OS HomeBrew
----------------
-
-brew install fzf rg tree-sitter luajit-openresty
-
-brew tap homebrew/cask-fonts
-brew install --cask font-jetbrains-mono-nerd-font
