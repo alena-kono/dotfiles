@@ -83,5 +83,6 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Buffers
-vim.keymap.set('n', '<C-]>', vim.cmd.bnext)
-vim.keymap.set('n', '<C-[>', vim.cmd.bprevious)
+vim.keymap.set('n', '<C-n>', vim.cmd.bnext)
+vim.keymap.set('n', '<C-p>', vim.cmd.bprevious)
+vim.keymap.set('n', '<leader>B', ':w | %bd | e# | bd# <CR>', {desc = 'Delete all buffers except current one' })
