@@ -37,7 +37,7 @@ require('lazy').setup({
 
   'mbbill/undotree',
   'stevearc/oil.nvim',
-  'pocco81/auto-save.nvim',
+  -- 'pocco81/auto-save.nvim',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -157,15 +157,15 @@ require('lazy').setup({
   },
   {
     'p00f/alabaster.nvim',
-    priority=1000,
-    lazy=false,
+    priority = 1000,
+    lazy = false,
     config = function()
       vim.cmd.colorscheme 'alabaster'
     end,
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',  opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
@@ -200,7 +200,7 @@ require('lazy').setup({
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
-  -- require 'kickstart.plugins.autoformat',
+  require 'kickstart.plugins.autoformat',
   require 'kickstart.plugins.debug',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -316,6 +316,7 @@ vim.keymap.set('n', '<leader>lg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>gg', ':LiveGrepGitRoot<cr>', { desc = '[G]rep on [G]it Root' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>j', require('telescope.builtin').jumplist, { desc = '[J]umplist' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -436,7 +437,6 @@ local on_attach = function(_, bufnr)
   -- Show line diagnostics automatically in hover window
   vim.o.updatetime = 250
   vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
-
 end
 
 -- document existing key chains
