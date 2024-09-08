@@ -20,10 +20,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -54,7 +54,7 @@ vim.o.smartcase = true
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
-vim.o.scrolloff = 8
+vim.o.scrolloff = 6
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -85,4 +85,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Buffers
 vim.keymap.set('n', '<C-n>', vim.cmd.bnext)
 vim.keymap.set('n', '<C-p>', vim.cmd.bprevious)
-vim.keymap.set('n', '<leader>B', ':w | %bd | e# | bd# <CR>', {desc = 'Delete all buffers except current one' })
+vim.keymap.set('n', '<leader>B', ':w | %bd | e# | bd# <CR>', { desc = 'Delete all buffers except current one' })
+
+-- Undotree
+vim.keymap.set('n', '<leader>u', ':UndotreeToggle <CR>', { desc = 'Undotree Toggle' })
